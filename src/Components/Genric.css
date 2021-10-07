@@ -1,0 +1,10 @@
+/* Putting name on centre of screen */
+.Genric-page {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

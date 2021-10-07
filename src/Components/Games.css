@@ -1,0 +1,16 @@
+/* To put image and name in the centre of page */
+.games-page {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Size of dice image*/
+.dice-image {
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,29 @@
+/* list of elemnts on left side of page */
+.lsit-Container {
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  width: 185px;
+  background-color: white;
+}
+
+/* styling of each div innside container flex */
+.lsit-Container div {
+  min-height: 30px;
+  margin: 5px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+/* on div hover/on div focus styling */
+.list-elem-hover {
+  color: white;
+  background-color: #267cfc;
+  cursor: pointer;
+}
+
+/* > in span styling to blend with white background of page */
+.lsit-Container div span {
+  color: white;
+  padding-left: 20px;
+}

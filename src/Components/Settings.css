@@ -1,0 +1,15 @@
+/* To put image and name in the centre of page */
+.settings-page {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* Size of image*/
+.settings-image {
+  height: 100px;
+  width: 200px;
+}

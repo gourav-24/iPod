@@ -1,0 +1,30 @@
+/* styling of music page having song*/
+.music-page {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* This contains song cover and title */
+.music-box {
+  display: flex;
+}
+
+.music-box span {
+  padding: 30px;
+}
+
+.music-image {
+  height: 150px;
+  width: 150px;
+}
+
+/*Audio control under first flex */
+.Audio-control {
+  padding-top: 20px;
+}

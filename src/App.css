@@ -1,38 +1,80 @@
+/* Gray color variable */
+html {
+  --border-color: #838383;
+}
+
+/* App level flex to put iPod in centre of screen */
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* iPod Body containing screen and buttons */
+.iPod-Body {
+  background-color: #f2f3f4;
+  box-shadow: 4px 4px 10px 6px #b3b6b7, 6px 6px 40px 6px #b3b6b7 inset;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-radius: 15px;
+  height: 550px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* iPod screen with background image */
+.ipod-Screen {
+  height: 270px;
+  margin: 10px;
+  width: 375px;
+  border: 4px solid var(--border-color);
+  border-radius: 12px;
+
+  background-image: url(./Images/BGimage.jpg);
+  background-repeat: no-repeat;
+  background-size: 375px 270px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* button flex to put MENU, enter ring, Play pause button each one under another  */
+#iPod-buttons {
+  background-color: white;
+
+  height: 270px;
+  width: 270px;
+  margin: 5px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* MENU button styling */
+.menu-button {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* iPod ring styling, containing all the buttons*/
+.iPod-ring {
+  cursor: pointer;
+  background-color: #d0d3d4;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+/* This flex holds left forward, entre button, right forward  */
+.centre-button {
+  margin-top: 5px;
+  display: flex;
+}
+
+/* left and right forward styling*/
+.arrow {
+  margin: 23px;
 }
