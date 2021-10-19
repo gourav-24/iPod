@@ -16,17 +16,13 @@ function App() {
     prevPage: "Home",
     currentPage: "Home",
   });
+  var play =false;
 
   /* useEffect is used to setup Zingtouch library and add rotate listner  */
   useEffect(() => {
     var containerElement = document.getElementById("iPod-buttons");
-    //console.log(" element fetched>>>", containerElement);
     var zt = new ZingTouch.Region(containerElement);
-    //console.log("zt>>> ", zt);
     zt.bind(containerElement, "rotate", function (eve) {
-      //console.log("inside binding fn");
-      //console.log("eve>>>> ", eve);
-      //console.log("eve detail>  >>> ", eve.detail);
       if (eve.detail.angle > 15) {
         var newIn = 0;
         var newMusicIndex = 0;
@@ -36,8 +32,6 @@ function App() {
           newMusicIndex = (data.musicIndex + 1) % 3;
         }
 
-        //console.log("mod>> ", newIn);
-        //console.log("music mod>> ", newMusicIndex);
         /* change index accordning to rotate event */
         setData({
           // Data set 1
@@ -46,23 +40,36 @@ function App() {
           prevPage: data.prevPage,
           currentPage: data.currentPage,
         });
-        //console.log(data.homeIndex);
       }
     });
   });
 
   /* on button click following method is called to go to next page and maintain previous page   */
   function changePage() {
+    
+    // music control for All songs page
+    if(data.currentPage ==="All Songs"){
+      let aud = document.getElementById("audio-bttn");
+      if(play){
+        play=false;
+        aud.pause();
+
+      }else{
+        play =true;
+        aud.play();
+
+      }
+      return;
+
+    }
+
     var toPage = "Home";
     var pageList = ["Cover Flow", "Music", "Games", "Setting"];
     var musicPageList = ["All Songs", "Artist", "Albums"];
-    //console.log("currentPage>>>>, ", data.currentPage);
     if (data.currentPage === "Home") {
       toPage = pageList[data.homeIndex];
-      //console.log("toPage>>>>, ", toPage);
     } else if (data.currentPage === "Music") {
       toPage = musicPageList[data.musicIndex];
-      //console.log("Music page>> ", toPage);
     }
 
     var currentPage = toPage;

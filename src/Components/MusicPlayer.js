@@ -13,7 +13,7 @@ function MusicPlayer() {
         </span>
       </div>
       <div className="Audio-control">
-        <audio controls src={song} type="audio/mp3"></audio>
+        <audio id="audio-bttn" controls src={song} type="audio/mp3"></audio>
       </div>
     </div>
   );
